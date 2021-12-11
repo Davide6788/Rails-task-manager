@@ -1,0 +1,11 @@
+<h2><%= @task.title %></h2>
+<p><%= @task.details %></p>
+<% if @task.completed == true %>
+    <p>Done</p>
+<% else %>
+    <p>Not done</p>
+<% end %>
+
+<p><%= link_to "Go to index", tasks_path %></p>
+<p><%= link_to "Update", edit_path %></p>
+<p><%= link_to "Delete", destroy_path(@task.id), method: :delete %></p>
